@@ -1,0 +1,136 @@
+main{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* grid-template-columns: repeat(4, minmax(200px, 1fr)); */
+  grid-template-rows: repeat(4,1fr);
+  grid-template-areas:
+  "one two two three"
+  "one five six three"
+  "four seven eight eight"
+  "four .. .. ..";
+  gap: 10px;
+  
+}
+.content-1{
+  background-color:  hsl(38, 58%, 90%);
+  max-width: 400px;
+  /* width: 100%; */
+  font-family: italic;
+  padding: 20px;
+  line-height: 1;
+  grid-area: one;
+  height: 450px;
+ 
+
+}
+.content-2{
+  max-width: 430px;
+  min-width:200px;
+  background-color:hsl(256, 67%, 59%) ;
+  padding: 20px;
+  color: white;
+  font-family: variableFont;
+  font-weight: 200;
+  border-radius: 5px;
+  grid-area: two;
+  height: 200px;
+  min-width: 200px;
+  text-align: center;
+
+  
+}
+.content-3{
+  background-color: hsl(256, 46%, 73%) ;
+  max-width: 200px;
+  padding: 20px;
+  grid-area: three;
+  height: 450px;
+
+}
+
+.content-4{
+  max-width: 200px;
+  background-color: hsl(37, 55%, 51%);
+  padding: 20px;
+  grid-area: four;
+  height: 400px;
+
+}
+
+.content-5{
+  max-width: 200px;
+  box-shadow: 10px 10px 5px lightblue;
+  padding: 10px;
+  height: 200px;
+  grid-area: five;
+
+
+
+}
+
+
+.content-6{
+  max-width: 200px;
+  background-color: hsl(37, 55%, 51%);
+  padding: 10px;
+  line-height:0.9;
+  /* display: flex; */
+  /* flex-direction: column; */
+  height: 200px;
+  grid-area: six;
+
+  
+  
+}
+.content-6 p{
+  font-weight: bold;
+  font-size: 22px;
+  font-family: variableFont;
+}
+
+.content-7{
+  max-width: 200px;
+  box-shadow: 10px 10px 5px lightblue;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  grid-area: seven;
+
+
+
+
+}
+
+.content-8{
+  display: flex;
+  max-width: 500px;
+  min-width: 200px;
+  align-items: center;
+  color: aliceblue;
+  background-color: hsl(256, 67%, 59%);
+  padding: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  grid-area: eight;
+}
+.content-8 p{
+  font-size: 22px;
+}
+
+
+ @media (max-width:600px){
+  main{
+    display: block;
+    align-items: center;
+  }
+  div{
+    margin-bottom: 10px;
+  }
+  .content-5,.content-6,.content-7{
+    max-width: 400px;
+    place-items: center;
+  }
+  .content-3,.content-4{
+    max-width: 400px;
+  }
+}

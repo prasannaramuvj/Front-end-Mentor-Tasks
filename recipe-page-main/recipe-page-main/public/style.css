@@ -68,7 +68,7 @@ ul li::marker,ol li::marker{
   color:#7b284f;
 }
 #highlight{
-  background-color:#edd1df;
+  background-color: hsl(330, 50%, 84%);
   margin-left: 10px;
   padding: 10px;
   border-radius: 20px;
